@@ -23,5 +23,5 @@ public class Conexion {
 			log.error("Error de conexion: "+e.getMessage());
 			throw new RuntimeException("Error de conexion", e);
 		}
-	}
-}
+	}}
+
