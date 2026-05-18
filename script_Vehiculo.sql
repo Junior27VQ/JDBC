@@ -7,3 +7,5 @@ create table vehiculo(
 	color varchar(30),
 	disponible boolean not null
 );
+alter table vehiculo add kilometraje int;
+select * from vehiculo
