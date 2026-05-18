@@ -23,7 +23,7 @@ public class DeleteVehiculo {
 			
 			ps.setString(1, "AAC-0123");
 			int filas = ps.executeUpdate();
-			log.info("Filas eliminadas: " + filas);
+			log.info("Vehiculo eliminado: " + filas);
 			
 		} catch (Exception e) {
 			log.error("Error al eliminar datos" + e.getMessage());

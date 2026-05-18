@@ -17,7 +17,7 @@ public class Conexion {
 		Connection con =null;	      
 		try {
 			con=DriverManager.getConnection(URL, USUARIO, CLAVE);
-			log.info("Conexion exitosa: ");
+			log.info("Conexion realizada: ");
 			return con;
 		} catch (SQLException e) {
 			log.error("Error de conexion: "+e.getMessage());

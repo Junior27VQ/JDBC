@@ -32,7 +32,7 @@ public class UpdateVehiculo {
 			ps.setString(7, "AAC-0123");
 			
 			int filas = ps.executeUpdate();
-			log.info("Filas actualizadas: " + filas);
+			log.info("Vehiculo actualizado: " + filas);
 
 		} catch (Exception e) {
 			log.error("Error al actualizar datos" + e.getMessage());

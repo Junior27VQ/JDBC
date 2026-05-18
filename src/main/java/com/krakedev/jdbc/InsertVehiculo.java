@@ -33,7 +33,7 @@ public class InsertVehiculo {
 			ps.setBoolean(7, true);
 			
 			int filas = ps.executeUpdate();
-			log.info("Filas insertadas: "+filas);
+			log.info("Vehiculo insertado: "+filas);
 			
 		} catch (SQLException e) {
 			log.error("Error de conexion"+e.getMessage());
