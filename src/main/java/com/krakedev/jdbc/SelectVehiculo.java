@@ -33,8 +33,9 @@ public class SelectVehiculo {
 				BigDecimal precio=rs.getBigDecimal("precio");
 				String color=rs.getString("color");
 				boolean disponible=rs.getBoolean("disponible");
+				int kilometraje=rs.getInt("kilometraje");
 				
-				log.info("Vehiculo: Placa: "+placa+" Marca: "+marca+" Modelo: "+modelo+" Año: "+anio+" Precio: "+precio+" Color: "+color+" Disponible: "+disponible);
+				log.info("Vehiculo: Placa: "+placa+" Marca: "+marca+" Modelo: "+modelo+" Año: "+anio+" Precio: "+precio+" Color: "+color+" Disponible: "+disponible+" Kilometraje: "+kilometraje);
 				
 			}
 			

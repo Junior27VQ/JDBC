@@ -18,7 +18,7 @@ public class UpdateVehiculo {
 		try {
 			con = Conexion.getConnetion();
 			String sql = """
-					update vehiculo set marca=?,modelo=?,anio=?,precio=?,color=?,disponible=? where placa=?;
+					update vehiculo set marca=?,modelo=?,anio=?,precio=?,color=?,disponible=?,kilometraje=? where placa=?;
 					""";
 			ps = con.prepareStatement(sql);
 
@@ -29,7 +29,8 @@ public class UpdateVehiculo {
 			ps.setBigDecimal(4, new BigDecimal(36000));
 			ps.setString(5, "Negro");
 			ps.setBoolean(6, true);
-			ps.setString(7, "AAC-0123");
+			ps.setInt(7, 60);
+			ps.setString(8, "AAC-0123");
 			
 			int filas = ps.executeUpdate();
 			log.info("Vehiculo actualizado: " + filas);

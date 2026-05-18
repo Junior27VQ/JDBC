@@ -19,8 +19,8 @@ public class InsertVehiculo {
 		try {
 			con = Conexion.getConnetion();
 			String sql=""" 
-				insert into vehiculo(placa,marca,modelo,anio,precio,color,disponible)
-				values(?,?,?,?,?,?,?);
+				insert into vehiculo(placa,marca,modelo,anio,precio,color,disponible,kilometraje)
+				values(?,?,?,?,?,?,?,?);
 				""";
 			ps=con.prepareStatement(sql);
 			
@@ -31,6 +31,7 @@ public class InsertVehiculo {
 			ps.setBigDecimal(5, new BigDecimal(15400));
 			ps.setString(6, "Gris");
 			ps.setBoolean(7, true);
+			ps.setInt(8, 40);
 			
 			int filas = ps.executeUpdate();
 			log.info("Vehiculo insertado: "+filas);
